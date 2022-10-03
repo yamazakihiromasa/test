@@ -5,7 +5,7 @@ import pytest
 import requests
 
 class GetRoot(unittest.TestCase):
-    options = Options(argnames='',argvalues='')
+    options = Options()
     # ヘッドレスモードで起動
     options.add_argument('--headless')
     driver = webdriver.Chrome(chrome_options=options)
@@ -19,7 +19,7 @@ class GetRoot(unittest.TestCase):
         cls.accept_next_alert = True
         cls.driver.get(cls.base_url)
 
-    @pytest.mark.parametrize()
+    @pytest.mark.parametrize(argnames='',argvalues='')
     def test_get_page(self):
         driver = self.driver
         # HTTPステータスを確認
