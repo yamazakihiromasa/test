@@ -20,7 +20,7 @@ class GetRoot(unittest.TestCase):
         cls.driver.get(cls.base_url)
 
     @pytest.mark.parametrize()
-    def test_get_page(self,argnames='',argvalues=''):
+    def test_get_page(self):
         driver = self.driver
         # HTTPステータスを確認
         r = requests.get(driver.current_url)
