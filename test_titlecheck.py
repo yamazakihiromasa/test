@@ -26,8 +26,8 @@ class GetRoot(unittest.TestCase):
         r = requests.get(driver.current_url)
         self.assertEqual(r.status_code, 200)
         # ページのタイトルをチェック
-        title_target = "Selenium - Web Browser Automation"
-        # title_target = "Selenium"
+        # title_target = "Selenium - Web Browser Automation"
+        title_target = "Selenium"
         print(driver.title)
         self.assertEqual(title_target, driver.title)
 
