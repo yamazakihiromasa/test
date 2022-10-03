@@ -5,7 +5,7 @@ import pytest
 import requests
 
 class GetRoot(unittest.TestCase):
-    options = Options()
+    options = Options(argnames='',argvalues='')
     # ヘッドレスモードで起動
     options.add_argument('--headless')
     driver = webdriver.Chrome(chrome_options=options)
